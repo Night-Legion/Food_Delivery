@@ -3,7 +3,7 @@
 		<img src="/favicon.png" alt="logo" class="w-24 h-24" />
 		<h1 class="text-5xl font-bold">Hungrr</h1>
 		<div class="space-y-4">
-			<h1 class="text-4xl font-semibold">🚧 Work in Progress 🚧</h1>
+			<h1 class="text-4xl font-semibold">🚧 Something is Cooking 🚧</h1>
 			<h3 class="text-gray-500 text-lg">Come back tomorrow to see the website...</h3>
 		</div>
 	</div>
