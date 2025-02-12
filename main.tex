@@ -1,0 +1,38 @@
+\documentclass[11pt]{scrarticle} % will change the class to `scrarticle` at the end as it is much much better at everything but it compiles slowly.
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{lipsum}
+\usepackage{setspace}
+% \usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{imakeidx}
+\usepackage{multicol}
+\usepackage[hidelinks]{hyperref}
+\usepackage[a4paper]{geometry}
+% \usepackage[skip=1em,indent=1.2em]{parskip}
+\usepackage{mathptmx}
+
+\onehalfspacing
+\renewcommand{\sfdefault}{phv}
+% \setmainfont[Ligatures=TeX]{Times New Roman}
+% \setsansfont{Arial}
+\makeindex[columns=3, title=Index, intoc]
+
+\begin{document}
+
+\include{titlepage.tex}
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+
+\include{src/introduction.tex}
+\include{src/overall_description}
+\include{src/specific_requirements}
+
+% Appendeices if any
+% Index if any
+\printindex
+\end{document}
