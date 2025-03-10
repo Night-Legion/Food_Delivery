@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import basket_icon from "../assets/frontend_assets/basket_icon.png";
 import { Menu, User, Search, X, House, ChefHat, Headphones, BadgeIndianRupee } from "lucide-react";
 
+
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [menu, setMenu] = useState("menu");
