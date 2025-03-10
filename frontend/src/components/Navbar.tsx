@@ -85,7 +85,7 @@ const Navbar = () => {
                                 <img src={basket_icon} alt="Cart" className="w-6 h-6" />
                                 <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center shadow-sm">0</span>
                             </div>
-                            <div className="hidden overflow-visible break-normal group-hover:block absolute top-full right-0 mt-4 bg-white shadow-lg rounded-md py-3 px-4 text-sm w-64 z-10 border border-amber-400">
+                            <div className="hidden overflow-visible break-normal group-hover:block absolute top-full right-0 mt-4 bg-white shadow-lg rounded-md py-3 px-4 text-sm w-80 h-40 z-10 border border-amber-400">
                                 <p className="text-center mt-2 text-4xl font-extrabold text-gray-500">Cart is empty</p>
                                 <div className="mt-2 pt-2 border-t border-gray-100">
                                     <p className="font-semibold text-gray-700 overflow-visible break-normal">Good food is always cooking! Go ahead, order some yummy items from the menu.</p>

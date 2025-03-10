@@ -9,7 +9,8 @@ app.use(cors({
 
 
 
-
+import authRoutes from "./routes/auth.routes.js";
+app.use('/api/auth/v1', authRoutes);
 
 
 export {app};
