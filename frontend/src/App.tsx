@@ -2,7 +2,7 @@
 
 function App() {
 
-  return (
+return (
     <>
     <div className="container mx-auto">
 	<div className="flex flex-col justify-center items-center h-screen space-y-6 text-center">
@@ -15,7 +15,7 @@ function App() {
 	</div>
 </div>
     </>
-  )
+)
 }
 
 export default App
