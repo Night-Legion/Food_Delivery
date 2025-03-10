@@ -1,10 +1,12 @@
+import Navbar from "./components/Navbar"
 
 
 function App() {
 
 return (
     <>
-    <div className="container mx-auto">
+	<Navbar />
+    <div className="mx-auto bg-white">
 	<div className="flex flex-col justify-center items-center h-screen space-y-6 text-center">
 		<img src="/favicon.png" alt="logo" className="w-24 h-24" />
 		<h1 className="text-5xl font-bold">Hungrr</h1>
