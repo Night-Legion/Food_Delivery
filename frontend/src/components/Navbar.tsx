@@ -2,7 +2,7 @@ import { useState } from 'react';
 import search_icon from "../assets/frontend_assets/search_icon.png";
 import basket_icon from "../assets/frontend_assets/basket_icon.png";
 import new_logo from "../assets/frontend_assets/new_logo.png";
-import { Menu, User, ChevronDown } from "lucide-react";
+import { Menu, User} from "lucide-react";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

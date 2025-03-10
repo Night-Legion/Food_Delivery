@@ -12,7 +12,7 @@ return (
 		<h1 className="text-5xl font-bold">Hungrr</h1>
 		<div className="space-y-4">
 			<h1 className="text-4xl font-semibold">🚧 Something is Cooking 🚧</h1>
-			<h3 className="text-gray-500 text-lg">Come back tomorrow to see the website...</h3>
+			<h3 className="text-gray-500 text-lg">Come back tomorrow to see the website....</h3>
 		</div>
 	</div>
 </div>
