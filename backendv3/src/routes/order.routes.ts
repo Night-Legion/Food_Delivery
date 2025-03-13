@@ -1,6 +1,6 @@
 import express from "express";
-import { jwtCheck, jwtParse } from "../middleware/auth";
-import OrderController from "../controllers/OrderController";
+import { jwtCheck, jwtParse } from "../middleware/auth.middleware";
+import OrderController from "../controllers/order.controllers";
 
 const router = express.Router();
 
