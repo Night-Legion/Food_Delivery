@@ -15,7 +15,7 @@ const HomePage = () => {
     const featuredRestaurants = [
         { id: 1, name: "Burger Palace", rating: 4.3, deliveryTime: "25-30 min", cuisine: "Burgers, Fast Food", image: "/burger-r.jpg" },
         { id: 2, name: "Pizza Heaven", rating: 4.7, deliveryTime: "30-40 min", cuisine: "Italian, Pizza", image: "/pizza-r.jpg" },
-        { id: 3, name: "Sushi World", rating: 3.8, deliveryTime: "35-45 min", cuisine: "Japanese, Sushi", image: "/sushi-r.jpg" },
+        { id: 3, name: "Sushi World", rating: 4.1, deliveryTime: "35-45 min", cuisine: "Japanese, Sushi", image: "/sushi-r.jpg" },
         { id: 4, name: "Taco Express", rating: 4.0, deliveryTime: "20-30 min", cuisine: "Mexican, Fast Food", image: "/taco-r.jpg" },
     ];
 
