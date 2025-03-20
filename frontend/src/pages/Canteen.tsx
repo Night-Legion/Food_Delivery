@@ -26,7 +26,7 @@ const Canteen = () => {
             category: "Breakfast", 
             rating: 4.5, 
             prepTime: "10-15 min", 
-            image: "/sandwich.jpg",
+            image: "/veg-sandwich.webp",
             veg: true
         },
         { 
@@ -36,7 +36,7 @@ const Canteen = () => {
             category: "Breakfast", 
             rating: 4.7, 
             prepTime: "15-20 min", 
-            image: "/dosa.jpg",
+            image: "/masala-dosa.webp",
             veg: true
         },
         { 
@@ -46,7 +46,7 @@ const Canteen = () => {
             category: "Lunch", 
             rating: 4.8, 
             prepTime: "20-25 min", 
-            image: "/biryani.jpg",
+            image: "/chicken-biryani.webp",
             veg: false
         },
         { 
@@ -56,7 +56,7 @@ const Canteen = () => {
             category: "Lunch", 
             rating: 4.2, 
             prepTime: "15-20 min", 
-            image: "/pulao.jpg",
+            image: "/veg-pulao.webp",
             veg: true
         },
         { 
@@ -66,7 +66,7 @@ const Canteen = () => {
             category: "Snacks", 
             rating: 4.0, 
             prepTime: "10-15 min", 
-            image: "/paneer-roll.jpg",
+            image: "/paneer-roll.webp",
             veg: true
         },
         { 
@@ -76,7 +76,7 @@ const Canteen = () => {
             category: "Beverages", 
             rating: 4.6, 
             prepTime: "5-10 min", 
-            image: "/cold-coffee.jpg",
+            image: "/coffee.jpg",
             veg: true
         },
         { 
@@ -86,7 +86,7 @@ const Canteen = () => {
             category: "Dinner", 
             rating: 4.9, 
             prepTime: "25-30 min", 
-            image: "/butter-chicken.jpg",
+            image: "/butter-chicken.webp",
             veg: false
         },
         { 
