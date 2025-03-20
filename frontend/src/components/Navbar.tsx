@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
 import basket_icon from "../assets/frontend_assets/basket_icon.png";
 import { Menu, User, Search, X, House, ChefHat, Headphones, BadgeIndianRupee, CircleUserRound} from "lucide-react";
@@ -25,6 +26,15 @@ const Navbar = () => {
     const navigate = useNavigate();
 
     const {loginWithRedirect, isAuthenticated, user} = useAuth0();
+
+    const handleClick = (name: string, link: string) => {
+        try {
+            setMenu(name)
+            navigate(`${link}`)
+        }catch(err: any) {
+            console.log(`Error redirecting  ${err}` )
+        }
+    }
 
     const items = [
         { name: "Home", link: "/home", icon: <House /> },
@@ -103,8 +113,8 @@ const Navbar = () => {
                         {items.map((item) => (
                             <a 
                                 key={item.name}
-                                href={item.link} 
-                                onClick={() => setMenu(item.name)} 
+                                // href={item.link} 
+                                onClick={() =>handleClick(item.name, item.link)} 
                                 className={`flex gap-1 font-bold text-gray-700 hover:text-orange-500 transition-all relative ${
                                     menu === item.name ? "text-orange-500" : ""
                                 }`}
