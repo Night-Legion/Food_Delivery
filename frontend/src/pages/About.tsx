@@ -1,4 +1,3 @@
-import React from 'react';
 import { Globe, UserPlus, Truck, ShieldCheck, Users, Award, ChefHat, Heart } from 'lucide-react';
 
 const About = () => {
@@ -9,36 +8,36 @@ const About = () => {
         { id: 4, value: '5M+', label: 'Happy Customers' },
     ];
 
-    const team = [
-        { 
-            id: 1, 
-            name: 'Sarah Johnson', 
-            role: 'Founder & CEO', 
-            image: '/team1.jpg', 
-            bio: 'Sarah founded Hungrr with a vision to revolutionize food delivery and bring delicious local food to everyone\'s doorstep.'
-        },
-        { 
-            id: 2, 
-            name: 'Michael Chen', 
-            role: 'CTO', 
-            image: '/team2.jpg', 
-            bio: 'Michael leads our tech team, ensuring our platform provides the fastest and most reliable food delivery experience possible.'
-        },
-        { 
-            id: 3, 
-            name: 'Priya Patel', 
-            role: 'Chief Marketing Officer', 
-            image: '/team3.jpg', 
-            bio: 'Priya drives our marketing strategy, connecting food lovers with their favorite restaurants through innovative campaigns.'
-        },
-        { 
-            id: 4, 
-            name: 'David Wilson', 
-            role: 'Head of Operations', 
-            image: '/team4.jpg', 
-            bio: 'David ensures smooth operations across all our delivery networks, optimizing for speed and customer satisfaction.'
-        },
-    ];
+    // const team = [
+    //     { 
+    //         id: 1, 
+    //         name: 'Sarah Johnson', 
+    //         role: 'Founder & CEO', 
+    //         image: '/team1.jpg', 
+    //         bio: 'Sarah founded Hungrr with a vision to revolutionize food delivery and bring delicious local food to everyone\'s doorstep.'
+    //     },
+    //     { 
+    //         id: 2, 
+    //         name: 'Michael Chen', 
+    //         role: 'CTO', 
+    //         image: '/team2.jpg', 
+    //         bio: 'Michael leads our tech team, ensuring our platform provides the fastest and most reliable food delivery experience possible.'
+    //     },
+    //     { 
+    //         id: 3, 
+    //         name: 'Priya Patel', 
+    //         role: 'Chief Marketing Officer', 
+    //         image: '/team3.jpg', 
+    //         bio: 'Priya drives our marketing strategy, connecting food lovers with their favorite restaurants through innovative campaigns.'
+    //     },
+    //     { 
+    //         id: 4, 
+    //         name: 'David Wilson', 
+    //         role: 'Head of Operations', 
+    //         image: '/team4.jpg', 
+    //         bio: 'David ensures smooth operations across all our delivery networks, optimizing for speed and customer satisfaction.'
+    //     },
+    // ];
 
     return (
             <div className="max-w-6xl mx-auto px-4">

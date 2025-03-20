@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import LoadingButton from "@/components/LoadingButton";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
-import { UserCircle, MapPin, Mail, Phone, Home, Building, Globe } from "lucide-react";
+import { UserCircle, MapPin, Mail, Home, Building, Globe } from "lucide-react";
 
 const formSchema = z.object({
   email: z.string().optional(),

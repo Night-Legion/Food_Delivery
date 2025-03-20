@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChefHat, ArrowRight, Check } from 'lucide-react';
 

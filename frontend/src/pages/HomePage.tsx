@@ -1,7 +1,7 @@
 import { Clock, Star, ArrowRight } from 'lucide-react';
 import SearchBar, { SearchForm } from "@/components/SearchBar";
 import { useNavigate } from "react-router-dom";
-import { useState, useCallback } from "react";
+import { useCallback } from "react";
 
 const HomePage = () => {
     const navigate = useNavigate();

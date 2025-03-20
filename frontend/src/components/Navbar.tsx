@@ -7,17 +7,17 @@ import { Link, useNavigate } from 'react-router-dom';
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
+    // SheetDescription,
     SheetTitle,
     SheetTrigger,
 } from "./ui/sheet";
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
 import MobileNavLinks from "./MobileNavLinks";
-import SearchBar, { SearchForm } from "@/components/SearchBar";
+import { SearchForm } from "@/components/SearchBar";
 
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [menu, setMenu] = useState("menu");
     const [isSearchActive, setIsSearchActive] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");

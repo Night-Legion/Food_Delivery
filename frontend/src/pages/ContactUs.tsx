@@ -4,7 +4,6 @@ import {
     Mail, 
     MapPin, 
     Clock, 
-    MessageSquare, 
     ChevronDown, 
     ChevronUp, 
     Send,
