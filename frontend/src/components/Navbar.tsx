@@ -27,10 +27,10 @@ const Navbar = () => {
     const {loginWithRedirect, isAuthenticated, user} = useAuth0();
 
     const items = [
-        { name: "Home", link: "#home", icon: <House /> },
-        { name: "Menu", link: "#menu", icon: <ChefHat /> },
-        { name: "About", link: "#about", icon: <Headphones /> },
-        { name: "Help", link: "#help", icon: <BadgeIndianRupee /> }
+        { name: "Home", link: "/home", icon: <House /> },
+        { name: "Menu", link: "/menu", icon: <ChefHat /> },
+        { name: "About", link: "/about", icon: <Headphones /> },
+        { name: "Help", link: "/help", icon: <BadgeIndianRupee /> }
     ]
 
     const handleSearchSubmit = (searchFormValues: SearchForm) => {

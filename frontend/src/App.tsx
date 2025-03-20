@@ -9,6 +9,10 @@ import SearchPage from "./pages/SearchPage";
 import DetailPage from "./pages/DetailPage";
 import OrderStatusPage from "./pages/OrderStatusPage";
 import BecomeOwner from "./pages/BecomeOwner";
+import Canteen from "./pages/Canteen";
+import Menu from "./pages/Menu";
+import About from "./pages/About";
+import HelpPage from "./pages/ContactUs";
 
 
 
@@ -72,6 +76,38 @@ return (
 			element={
 				<Layout>
 				<BecomeOwner />
+				</Layout>
+			}
+			/>
+			<Route
+			path="/menu"
+			element={
+				<Layout>
+				<Menu />
+				</Layout>
+			}
+			/>
+			<Route
+			path="/about"
+			element={
+				<Layout>
+				<About />
+				</Layout>
+			}
+			/>
+			<Route
+			path="/help"
+			element={
+				<Layout>
+				<HelpPage />
+				</Layout>
+			}
+			/>
+			<Route
+			path="/canteen"
+			element={
+				<Layout>
+				<Canteen />
 				</Layout>
 			}
 			/>
