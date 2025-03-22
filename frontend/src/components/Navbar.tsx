@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
 import basket_icon from "../assets/frontend_assets/basket_icon.png";
-import { Menu, User, Search, X, House, ChefHat, Headphones, BadgeIndianRupee, CircleUserRound} from "lucide-react";
+import { Menu, User, Search, X, House, ChefHat, Headphones, BadgeIndianRupee, CircleUserRound } from "lucide-react";
 import { useAuth0 } from '@auth0/auth0-react';
 import UsernameMenu from './UsernameMenu';
 import { Link, useNavigate } from 'react-router-dom';
@@ -25,14 +25,14 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const navigate = useNavigate();
 
-    const {loginWithRedirect, isAuthenticated, user} = useAuth0();
+    const { loginWithRedirect, isAuthenticated, user } = useAuth0();
 
     const handleClick = (name: string, link: string) => {
         try {
             setMenu(name)
             navigate(`${link}`)
-        }catch(err: any) {
-            console.log(`Error redirecting  ${err}` )
+        } catch (err: any) {
+            console.log(`Error redirecting  ${err}`)
         }
     }
 
@@ -94,9 +94,8 @@ const Navbar = () => {
     }, [isSearchActive]);
 
     return (
-        <nav className={`sticky top-0 z-50 transition-all duration-300 ${
-            isScrolled ? "bg-white shadow-md" : "bg-white"
-        }`} onKeyDown={handleKeyDown}>
+        <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-white"
+            }`} onKeyDown={handleKeyDown}>
             <div className="container px-4 py-3 mx-auto">
                 <div className="flex items-center justify-between">
 
@@ -107,17 +106,15 @@ const Navbar = () => {
                     </div>
 
                     {/* Desktop Navigation - Modified to shift left when search is active */}
-                    <div className={`items-center hidden space-x-10 md:flex transition-all duration-300 ${
-                        isSearchActive ? "transform -translate-x-5" : ""
-                    }`}>
+                    <div className={`items-center hidden space-x-10 md:flex transition-all duration-300 ${isSearchActive ? "transform -translate-x-5" : ""
+                        }`}>
                         {items.map((item) => (
                             <a 
                                 key={item.name}
                                 // href={item.link} 
-                                onClick={() =>handleClick(item.name, item.link)} 
-                                className={`flex gap-1 font-bold text-gray-700 hover:text-orange-500 transition-all relative ${
-                                    menu === item.name ? "text-orange-500" : ""
-                                }`}
+                                onClick={() => handleClick(item.name, item.link)} 
+                                className={`flex gap-1 font-bold text-gray-700 hover:text-orange-500 transition-all relative ${menu === item.name ? "text-orange-500" : ""
+                                    }`}
                             >
                                 {item.icon}
                                 {item.name.charAt(0).toUpperCase() + item.name.slice(1).replace("-", " ")}
@@ -190,9 +187,8 @@ const Navbar = () => {
                             )}
                         </div>
 
-                        <div className={`flex items-center space-x-5 transition-all duration-300 ${
-                            isSearchActive ? "opacity-70" : ""
-                        }`}>
+                        <div className={`flex items-center space-x-5 transition-all duration-300 ${isSearchActive ? "opacity-70" : ""
+                            }`}>
                             {isAuthenticated ? (
                                 <Link to="/order-status" className="font-bold hover:text-orange-500">
                                     Order Status
@@ -213,9 +209,9 @@ const Navbar = () => {
                             </button>
 
                             <span className='flex items-center space-x-2'>
-                                {isAuthenticated ? (<UsernameMenu /> ): 
+                                {isAuthenticated ? (<UsernameMenu />) : 
                                     <button
-                                        onClick={async() => await loginWithRedirect()}
+                                        onClick={async () => await loginWithRedirect()}
                                         className="flex items-center gap-2 px-5 py-2 text-sm font-medium text-white transition-all duration-300 rounded-full shadow-sm bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 hover:shadow-md"
                                     >
                                         <User size={16} />
@@ -279,13 +275,10 @@ const Navbar = () => {
                                     {items.map((item) => (
                                         <a 
                                             key={item.name}
-                                            href={item.link}
-                                            onClick={() => {
-                                                setMenu(item.name);
-                                            }} 
-                                            className={`flex items-center gap-3 px-2 py-1 rounded-md transition-colors ${
-                                                menu === item.name ? "text-orange-500 font-medium" : "text-gray-700 hover:text-orange-500"
-                                            }`}
+                                            // href={item.link}
+                                            onClick={() => handleClick(item.name, item.link)} 
+                                            className={`flex items-center gap-3 px-2 py-1 rounded-md transition-colors ${menu === item.name ? "text-orange-500 font-medium" : "text-gray-700 hover:text-orange-500"
+                                                }`}
                                         >
                                             {item.icon}
                                             {item.name.charAt(0).toUpperCase() + item.name.slice(1).replace("-", " ")}
