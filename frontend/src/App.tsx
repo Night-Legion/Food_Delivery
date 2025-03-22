@@ -18,104 +18,104 @@ import HelpPage from "./pages/ContactUs";
 
 function App() {
 
-return (
-    <>
-	<Routes>
-		<Route
-			path="/"
-			element={
-			<Layout showHero>
-				<HomePage />
-			</Layout>
-			}
-		/>
-		<Route path="/auth-callback" element={<AuthCallbackPage />} />
-		<Route
-			path="/search/:city"
-			element={
-			<Layout showHero={false}>
-				<SearchPage />
-			</Layout>
-			}
-		/>
-		<Route
-			path="/detail/:restaurantId"
-			element={
-			<Layout showHero={false}>
-				<DetailPage />
-			</Layout>
-			}
-		/>
-		<Route element={<ProtectedRoute />}>
-			<Route
-			path="/order-status"
-			element={
-				<Layout>
-				<OrderStatusPage />
-				</Layout>
-			}
-			/>
-			<Route
-			path="/user-profile"
-			element={
-				<Layout>
-				<UserProfilePage />
-				</Layout>
-			}
-			/>
-			<Route
-			path="/manage-restaurant"
-			element={
-				<Layout>
-				<ManageRestaurantPage />
-				</Layout>
-			}
-			/>
-			<Route
-			path="/become-owner"
-			element={
-				<Layout>
-				<BecomeOwner />
-				</Layout>
-			}
-			/>
-			<Route
-			path="/menu"
-			element={
-				<Layout>
-				<Menu />
-				</Layout>
-			}
-			/>
-			<Route
-			path="/about"
-			element={
-				<Layout>
-				<About />
-				</Layout>
-			}
-			/>
-			<Route
-			path="/help"
-			element={
-				<Layout>
-				<HelpPage />
-				</Layout>
-			}
-			/>
-			<Route
-			path="/canteen"
-			element={
-				<Layout>
-				<Canteen />
-				</Layout>
-			}
-			/>
-		</Route>
-		<Route path="*" element={<Navigate to = "/" />} />
-	</Routes>
-    </>
-)
+	return (
+		<>
+			<Routes>
+				<Route
+					path="/"
+					element={
+						<Layout showHero>
+							<HomePage />
+						</Layout>
+					}
+				/>
+				<Route path="/auth-callback" element={<AuthCallbackPage />} />
+				<Route
+					path="/search/:city"
+					element={
+						<Layout showHero={false}>
+							<SearchPage />
+						</Layout>
+					}
+				/>
+				<Route
+					path="/detail/:restaurantId"
+					element={
+						<Layout showHero={false}>
+							<DetailPage />
+						</Layout>
+					}
+				/>
+				<Route element={<ProtectedRoute />}>
+					<Route
+						path="/order-status"
+						element={
+							<Layout>
+								<OrderStatusPage />
+							</Layout>
+						}
+					/>
+					<Route
+						path="/user-profile"
+						element={
+							<Layout>
+								<UserProfilePage />
+							</Layout>
+						}
+					/>
+					<Route
+						path="/manage-restaurant"
+						element={
+							<Layout>
+								<ManageRestaurantPage />
+							</Layout>
+						}
+					/>
+					<Route
+						path="/become-owner"
+						element={
+							<Layout>
+								<BecomeOwner />
+							</Layout>
+						}
+					/>
+					<Route
+						path="/menu"
+						element={
+							<Layout>
+								<Menu />
+							</Layout>
+						}
+					/>
+					<Route
+						path="/canteen"
+						element={
+							<Layout>
+								<Canteen />
+							</Layout>
+						}
+					/>
+				</Route>
+				<Route
+					path="/about"
+					element={
+						<Layout>
+							<About />
+						</Layout>
+					}
+				/>
+				<Route
+					path="/help"
+					element={
+						<Layout>
+							<HelpPage />
+						</Layout>
+					}
+				/>
+				<Route path="*" element={<Navigate to="/" />} />
+			</Routes>
+		</>
+	)
 }
 
 export default App
