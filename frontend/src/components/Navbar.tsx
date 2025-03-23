@@ -113,7 +113,7 @@ const Navbar = () => {
                                 key={item.name}
                                 // href={item.link} 
                                 onClick={() => handleClick(item.name, item.link)} 
-                                className={`flex gap-1 font-bold text-gray-700 hover:text-orange-500 transition-all relative ${menu === item.name ? "text-orange-500" : ""
+                                className={`flex gap-1 cursor-pointer font-bold text-gray-700 hover:text-orange-500 transition-all relative ${menu === item.name ? "text-orange-500" : ""
                                     }`}
                             >
                                 {item.icon}
