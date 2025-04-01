@@ -24,12 +24,12 @@ const Hero = () => {
                 <div className="flex space-x-4">
                     <button
                     onClick={() => navigate("/canteen")}
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg">
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg cursor-pointer">
                         Order From Canteen
                     </button>
                     <button
                     onClick={() => navigate("/menu")}
-                    className="bg-white hover:bg-gray-100 text-orange-500 font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg">
+                    className="bg-white hover:bg-gray-100 text-orange-500 font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg cursor-pointer">
                         View Restaurants
                     </button>
                 </div>
