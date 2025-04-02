@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Youtube, Smartphone, MapPin, Clock, Phone, Mail, ArrowRight, ChevronRight, MapPinned, Clock3, Send, Star, Coffee, Pizza, Utensils } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Youtube, Smartphone, Phone, Mail, ArrowRight, ChevronRight, MapPinned, Clock3, Send, Star, Coffee, Pizza, Utensils } from 'lucide-react';
 
 const Footer = () => {
     return (

@@ -139,6 +139,7 @@ const Canteen = () => {
                 <p className="mb-2 text-lg text-center text-gray-600">
                     Order from your hostel, skip the queue!
                 </p>
+                <img src='/canteen-new.jpg' alt='canteen-menu'/>
                 
                 <div className="flex flex-col items-center w-full max-w-2xl mx-auto mt-4 mb-2 md:flex-row">
                     <div className="relative flex items-center justify-center w-full mb-3 md:mb-0 md:mr-4 md:flex-1">

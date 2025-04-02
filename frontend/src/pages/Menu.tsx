@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Filter, ChevronRight, Star, Clock } from 'lucide-react';
+import { Filter, ChevronRight, Clock } from 'lucide-react';
 import { useSearchRestaurants } from "@/api/RestaurantApi";
 import { Link } from 'react-router-dom';
 

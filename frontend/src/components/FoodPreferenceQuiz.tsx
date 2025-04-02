@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ArrowRight, Check, ChevronLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -6,8 +6,8 @@ const FoodPreferenceQuiz = () => {
     const [quizStep, setQuizStep] = useState(0);
     const [userPreferences, setUserPreferences] = useState({
         spiceLevel: '',
-        dietaryRestrictions: [],
-        cuisineTypes: [],
+        dietaryRestrictions: [] as ('vegetarian' | 'vegan' | 'gluten-free' | 'dairy-free' | 'keto' | 'none')[],
+        cuisineTypes: [] as string[],
         mealType: '',
         priceRange: ''
     });
@@ -80,47 +80,67 @@ const FoodPreferenceQuiz = () => {
         }
     ];
 
-    const handleSingleSelect = (field, value) => {
+    interface UserPreferences {
+        spiceLevel: string;
+        dietaryRestrictions: ('vegetarian' | 'vegan' | 'gluten-free' | 'dairy-free' | 'keto' | 'none')[];
+        cuisineTypes: string[]; // Explicitly typed as an array of strings
+        mealType: string;
+        priceRange: string;
+    }
+
+    // interface QuizStep {
+    //     question: string;
+    //     options: { id: string; label: string; icon: string }[];
+    //     type: 'single' | 'multiple';
+    //     field: keyof UserPreferences;
+    // }
+
+    const handleSingleSelect = (field: keyof UserPreferences, value: string): void => {
         setUserPreferences({
-        ...userPreferences,
-        [field]: value
+            ...userPreferences,
+            [field]: value
         });
         
         // Automatically advance to next question for single-choice questions
         if (quizStep < quizSteps.length - 1) {
-        setTimeout(() => setQuizStep(quizStep + 1), 300);
+            setTimeout(() => setQuizStep(quizStep + 1), 300);
         }
     };
 
-    const handleMultipleSelect = (field, value) => {
-        const currentSelections = [...userPreferences[field]];
+    interface MultipleSelectField {
+        field: keyof UserPreferences;
+        value: string;
+    }
+
+    const handleMultipleSelect = ({ field, value }: MultipleSelectField): void => {
+        const currentSelections = [...userPreferences[field] as string[]];
         
         // If "none" is selected, clear all other selections
         if (value === 'none') {
-        setUserPreferences({
-            ...userPreferences,
-            [field]: ['none']
-        });
-        return;
+            setUserPreferences({
+                ...userPreferences,
+                [field]: ['none']
+            });
+            return;
         }
         
         // If user selects something else when "none" was selected, remove "none"
         if (currentSelections.includes('none')) {
-        currentSelections.splice(currentSelections.indexOf('none'), 1);
+            currentSelections.splice(currentSelections.indexOf('none'), 1);
         }
         
         // Toggle selection
         if (currentSelections.includes(value)) {
-        const updatedSelections = currentSelections.filter(item => item !== value);
-        setUserPreferences({
-            ...userPreferences,
-            [field]: updatedSelections
-        });
+            const updatedSelections = currentSelections.filter(item => item !== value);
+            setUserPreferences({
+                ...userPreferences,
+                [field]: updatedSelections
+            });
         } else {
-        setUserPreferences({
-            ...userPreferences,
-            [field]: [...currentSelections, value]
-        });
+            setUserPreferences({
+                ...userPreferences,
+                [field]: [...currentSelections, value]
+            });
         }
     };
 
@@ -221,8 +241,8 @@ const FoodPreferenceQuiz = () => {
     const isLastStep = quizStep === quizSteps.length - 1;
     const hasSelection = currentStep ? (
         isMultipleChoice 
-        ? userPreferences[currentStep.field].length > 0 
-        : userPreferences[currentStep.field] !== ''
+        ? userPreferences[currentStep.field as keyof UserPreferences].length > 0 
+        : userPreferences[currentStep.field as keyof UserPreferences] !== ''
     ) : true;
 
     // Render creative results page
@@ -404,15 +424,15 @@ const FoodPreferenceQuiz = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {currentStep?.options.map((option) => {
                 const isSelected = isMultipleChoice 
-                ? userPreferences[currentStep.field].includes(option.id)
-                : userPreferences[currentStep.field] === option.id;
+                ? (userPreferences[currentStep.field as keyof UserPreferences] as string[]).includes(option.id)
+                : userPreferences[currentStep.field as keyof UserPreferences] === option.id;
                 
                 return (
                 <button
                     key={option.id}
                     onClick={() => isMultipleChoice 
-                    ? handleMultipleSelect(currentStep.field, option.id)
-                    : handleSingleSelect(currentStep.field, option.id)
+                    ? handleMultipleSelect({ field: currentStep.field as keyof UserPreferences, value: option.id })
+                    : handleSingleSelect(currentStep.field as keyof UserPreferences, option.id)
                     }
                     className={`p-4 rounded-lg transition-all flex flex-col items-center justify-center h-24 relative
                     ${isSelected 

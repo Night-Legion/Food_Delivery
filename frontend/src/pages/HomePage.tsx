@@ -1,4 +1,4 @@
-import { Clock, Star, ArrowRight, Search, MapPin, Truck, Award, Gift } from 'lucide-react';
+import { Clock, Star, ArrowRight,  MapPin, Truck, Award, Gift } from 'lucide-react';
 import SearchBar, { SearchForm } from "@/components/SearchBar";
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
@@ -44,15 +44,8 @@ const HomePage = () => {
         { id: 3, title: "20% CASHBACK", description: "When you pay with our app wallet", code: "WALLET20", expiry: "Valid until April 30" },
     ];
 
-    interface Category {
-        id: number;
-        name: string;
-        image: string;
-    }
-
-    const handleCategoryClick = useCallback((categoryName: Category['name']) => {
-        navigate('/menu');
-        // navigate(`/category/${categoryName.toLowerCase()}`);
+    const handleCategoryClick = useCallback((categoryName: string) => {
+        navigate(`/category/${categoryName.toLowerCase()}`);
     }, [navigate]);
 
     interface Restaurant {
@@ -245,7 +238,7 @@ const HomePage = () => {
                         <div className="md:w-2/5 relative">
                             <div className="h-64 md:h-full relative overflow-hidden">
                             <img 
-                                src="/canteen-hero.webp" 
+                                src="/canteen.jpg" 
                                 alt="Campus Canteen" 
                                 className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
                                 onError={(e) => {

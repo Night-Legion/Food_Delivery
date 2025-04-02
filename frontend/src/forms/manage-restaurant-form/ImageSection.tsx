@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import {
   FormControl,

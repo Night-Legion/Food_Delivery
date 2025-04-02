@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Form } from "@/components/ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";

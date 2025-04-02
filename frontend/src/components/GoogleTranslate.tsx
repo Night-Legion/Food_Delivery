@@ -1,5 +1,17 @@
 import React, { useEffect } from 'react';
 
+// Extend the Window interface to include googleTranslateElementInit
+declare global {
+    interface Window {
+        googleTranslateElementInit?: () => void;
+        google?: {
+            translate: {
+                TranslateElement: new (options: object, containerId: string) => void;
+            };
+        };
+    }
+}
+
 interface LanguageOption {
     code: string;
     name: string;
@@ -30,11 +42,13 @@ interface LanguageOption {
         
         // Initialize Google Translate
         window.googleTranslateElementInit = () => {
-        new window.google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: languages.map(lang => lang.code).join(','),
-            autoDisplay: false
-        }, 'google_translate_element');
+        if (window.google && window.google.translate) {
+            new window.google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: languages.map(lang => lang.code).join(','),
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
         };
         
         return () => {
