@@ -31,7 +31,7 @@ export const useGetMyOrders = () => {
       refetchInterval: 5000,
     }
   );
-
+  console.log(orders);
   return { orders, isLoading };
 };
 
