@@ -15,7 +15,7 @@ const Layout = ({ children, showHero = false }: Props) => {
         <div className='flex flex-col min-h-screen'>
         <Navbar />
         {showHero && <Hero />}
-        <div className='container flex-1 py-10 mx-auto'>
+        <div className='container flex-1 py-10 mx-auto overflow-hidden'>
             {children}
         </div>
         <Footer />

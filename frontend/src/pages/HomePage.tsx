@@ -69,31 +69,22 @@ const HomePage = () => {
     }, [navigate]);
 
     const handleOrderNow = async () => {
-            const restaurantId = "67d46e789a73a0b9bb917f33"; // Hardcoded restaurant ID
+            const restaurantId = "67d46e789a73a0b9bb917f33"; 
             const specialMenuItem = {
-              _id: "67d46e789a73a0b9bb917f35",
-              name: "Burger",
-              price: 5000, // Adjust price if needed
-              quantity: 1,
+                _id: "67d46e789a73a0b9bb917f35",
+                name: "Burger",
+                price: 5000, 
+                quantity: 1,
+                };
+                sessionStorage.setItem(
+                `cartItems-${restaurantId}`,
+                JSON.stringify([specialMenuItem])
+                );
+                window.location.href = `/detail/${restaurantId}`;
             };
-          
-            // Save to sessionStorage before redirecting
-            sessionStorage.setItem(
-              `cartItems-${restaurantId}`,
-              JSON.stringify([specialMenuItem])
-            );
-          
-            // Redirect to restaurant page
-            window.location.href = `/detail/${restaurantId}`;
-          };
-          
-      
-      
 
     return (
-        <div className="flex flex-col gap-8 px-4 pb-16 bg-gray-50 md:px-6">
-
-
+        <div className="flex flex-col gap-8 px-4 pb-16 bg-gray-50 md:px-6 mt-8 md:mt-16">
             {/* Hero Section with Search */}
             <div className="relative">
                 {/* Background Shapes */}
@@ -685,7 +676,7 @@ const HomePage = () => {
                         <div className="flex items-center">
                             <div className="w-10 h-10 bg-orange-200 rounded-full mr-3 flex items-center justify-center text-orange-600 font-bold">S</div>
                             <div>
-                                <p className="font-medium">Sarah T.</p>
+                                <p className="font-medium">Sunil Sir</p>
                                 <p className="text-xs text-gray-500">Ordered from Pizza Heaven</p>
                             </div>
                         </div>
@@ -700,7 +691,7 @@ const HomePage = () => {
                         <div className="flex items-center">
                             <div className="w-10 h-10 bg-orange-200 rounded-full mr-3 flex items-center justify-center text-orange-600 font-bold">M</div>
                             <div>
-                                <p className="font-medium">Michael K.</p>
+                                <p className="font-medium">Abdul Sir</p>
                                 <p className="text-xs text-gray-500">Regular customer</p>
                             </div>
                         </div>
@@ -716,7 +707,7 @@ const HomePage = () => {
                         <div className="flex items-center">
                             <div className="w-10 h-10 bg-orange-200 rounded-full mr-3 flex items-center justify-center text-orange-600 font-bold">A</div>
                             <div>
-                                <p className="font-medium">Aisha R.</p>
+                                <p className="font-medium">Sanjeev Khanna</p>
                                 <p className="text-xs text-gray-500">Ordered from Taco Express</p>
                             </div>
                         </div>
