@@ -16,6 +16,7 @@ import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
 import MobileNavLinks from "./MobileNavLinks";
 import { SearchForm } from "@/components/SearchBar";
+import LanguageSwitcher from './GoogleTranslate';
 
 const Navbar = () => {
     // const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -99,10 +100,11 @@ const Navbar = () => {
             <div className="container px-4 py-3 mx-auto">
                 <div className="flex items-center justify-between">
 
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-between space-x-4">
                         <div className="flex items-center transition-transform cursor-pointer hover:scale-105">
                             <img src="/hungrr-logo6.svg" onClick={() => navigate('/')} alt='Hungrr logo' className="h-12" />
                         </div>
+                        <LanguageSwitcher />
                     </div>
 
                     {/* Desktop Navigation - Modified to shift left when search is active */}
