@@ -51,7 +51,8 @@ const HomePage = () => {
     }
 
     const handleCategoryClick = useCallback((categoryName: Category['name']) => {
-        navigate(`/category/${categoryName.toLowerCase()}`);
+        navigate('/menu');
+        // navigate(`/category/${categoryName.toLowerCase()}`);
     }, [navigate]);
 
     interface Restaurant {
