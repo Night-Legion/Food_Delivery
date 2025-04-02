@@ -216,6 +216,140 @@ const HomePage = () => {
                 </div>
             </div>
 
+            {/* Campus Canteen Promotion Section */}
+            <div className="relative my-12 overflow-hidden">
+                {/* Decorative elements */}
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-orange-200 rounded-full opacity-40 -mr-10 -mt-10 z-0"></div>
+                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-300 rounded-full opacity-30 -ml-8 -mb-8 z-0"></div>
+                    
+                    <div className="relative z-10 bg-gradient-to-br from-white to-orange-50 rounded-2xl shadow-xl overflow-hidden border border-orange-100">
+                        <div className="flex flex-col md:flex-row">
+                        {/* Image/Visual section */}
+                        <div className="md:w-2/5 relative">
+                            <div className="h-64 md:h-full relative overflow-hidden">
+                            <img 
+                                src="/canteen-hero.webp" 
+                                alt="Campus Canteen" 
+                                className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+                                onError={(e) => {
+                                e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="%23f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Crect x="3" y="3" width="18" height="18" rx="2" ry="2"%3E%3C/rect%3E%3Ccircle cx="8.5" cy="8.5" r="1.5"%3E%3C/circle%3E%3Cpolyline points="21 15 16 10 5 21"%3E%3C/polyline%3E%3C/svg%3E';
+                                }}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div className="absolute bottom-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                                Campus Exclusive
+                            </div>
+                            </div>
+                        </div>
+                        
+                        {/* Content section */}
+                        <div className="md:w-3/5 p-6 md:p-8">
+                            <div className="flex items-center mb-3">
+                            <span className="w-8 h-1 bg-orange-500 rounded-full mr-3"></span>
+                            <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Campus Canteen Express</h2>
+                            </div>
+                            
+                            <p className="text-gray-600 mb-4">Skip the queue and get delicious meals delivered straight to your hostel! Order from our diverse menu featuring everything from local favorites to global cuisines.</p>
+                            
+                            {/* Features highlights */}
+                            <div className="grid grid-cols-2 gap-3 mb-6">
+                            <div className="flex items-start">
+                                <div className="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                                <Clock className="w-4 h-4 text-orange-600" />
+                                </div>
+                                <div>
+                                <h3 className="text-sm font-bold text-gray-800">Fast Delivery</h3>
+                                <p className="text-xs text-gray-500">Average wait time: 15 mins</p>
+                                </div>
+                            </div>
+                            
+                            <div className="flex items-start">
+                                <div className="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                                <MapPin className="w-4 h-4 text-orange-600" />
+                                </div>
+                                <div>
+                                <h3 className="text-sm font-bold text-gray-800">Hostel Delivery</h3>
+                                <p className="text-xs text-gray-500">Right to your doorstep</p>
+                                </div>
+                            </div>
+                            
+                            <div className="flex items-start">
+                                <div className="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                                <Star className="w-4 h-4 text-orange-600" />
+                                </div>
+                                <div>
+                                <h3 className="text-sm font-bold text-gray-800">Rated 4.8/5</h3>
+                                <p className="text-xs text-gray-500">By fellow students</p>
+                                </div>
+                            </div>
+                            
+                            <div className="flex items-start">
+                                <div className="flex-shrink-0 w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                                <Gift className="w-4 h-4 text-orange-600" />
+                                </div>
+                                <div>
+                                <h3 className="text-sm font-bold text-gray-800">Student Discount</h3>
+                                <p className="text-xs text-gray-500">Use your campus ID</p>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            {/* Popular items showcase */}
+                            <div className="mb-6">
+                            <h3 className="text-sm font-bold text-gray-500 uppercase mb-3">Most Popular Items</h3>
+                            <div className="flex space-x-3 overflow-x-auto pb-2 hide-scrollbar">
+                                {["Masala Dosa", "Chicken Biryani", "Cold Coffee", "Butter Chicken"].map((item, i) => (
+                                <div key={i} className="flex-shrink-0 px-3 py-1 bg-white border border-orange-200 rounded-full text-sm shadow-sm">
+                                    {item}
+                                </div>
+                                ))}
+                            </div>
+                            </div>
+                            
+                            {/* Schedule info */}
+                            <div className="bg-orange-50 rounded-lg p-3 mb-6 border-l-4 border-orange-500">
+                            <div className="flex items-center text-sm">
+                                <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                                <span className="font-medium text-gray-800">Open Now</span>
+                                <span className="mx-2 text-gray-400">•</span>
+                                <span className="text-gray-600">
+                                {(() => {
+                                    const hour = new Date().getHours();
+                                    if (hour >= 6 && hour < 11) return "Breakfast: 7:00 AM - 9:00 AM";
+                                    if (hour >= 11 && hour < 16) return "Lunch: 12:00 PM - 2:00 PM";
+                                    if (hour >= 16 && hour < 20) return "Dinner: 7:00 PM - 9:00 PM";
+                                    return "Snacks: 4:00 PM - 6:00 PM";
+                                })()}
+                                </span>
+                            </div>
+                            </div>
+                            
+                            {/* CTA button */}
+                            <button 
+                            onClick={() => navigate('/canteen')} 
+                            className="w-full md:w-auto bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all shadow-md hover:shadow-lg flex items-center justify-center cursor-pointer"
+                            >
+                            Explore Campus Canteen
+                            <ArrowRight className="ml-2 w-4 h-4" />
+                            </button>
+                        </div>
+                        </div>
+                        
+                        {/* Food highlights strip */}
+                        <div className="bg-gradient-to-r from-orange-600 to-orange-500 py-3 px-4 flex items-center overflow-x-auto hide-scrollbar">
+                        <div className="text-white font-bold mr-4 flex-shrink-0">TODAY'S SPECIALS:</div>
+                        <div className="flex space-x-6 animate-marquee">
+                            {["Butter Paneer Combo @ ₹120", "Buy 1 Get 1 Samosa", "20% Off on Breakfast Items", "Combo Meals from ₹99", "Free Delivery on Orders Above ₹200"].map((special, i) => (
+                            <div key={i} className="flex items-center text-white">
+                                <span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>
+                                <span>{special}</span>
+                            </div>
+                            ))}
+                        </div>
+                        </div>
+                    </div>
+            </div>
+
             {/* Food Categories Section */}
             <div className="relative mb-8">
                 <div className="absolute right-0 bottom-0 w-40 h-40 bg-orange-100 rounded-full opacity-50 -mr-16 -mb-16 z-0"></div>
@@ -233,11 +367,11 @@ const HomePage = () => {
                                 className="flex flex-col items-center transition-all duration-300 cursor-pointer group hover:scale-105"
                                 onClick={() => handleCategoryClick(category.name)}
                             >
-                                <div className="w-20 h-20 text-4xl mb-2 overflow-hidden transition duration-300 border-1 border-orange-100 rounded-full shadow-sm md:w-45 md:h-45 group-hover:border-orange-400 group-hover:shadow-md">
+                                <div className="w-20 h-20 text-4xl mb-2 overflow-hidden transition duration-300 rounded-full md:w-45 md:h-45">
                                     <img 
                                         src={category.image} 
                                         alt={category.name} 
-                                        className="object-cover w-full h-full transition-transform group-hover:scale-110" 
+                                        className="object-cover w-full h-full transition-transform group-hover:scale-130" 
                                         loading="lazy"
                                         width="160"
                                         height="160"
@@ -254,71 +388,71 @@ const HomePage = () => {
             </div>
 
             {/* Dish Spotlight */}
-    <div className="relative mb-8">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-yellow-500 opacity-10 rounded-xl"></div>
-        
-        <div className="p-6 md:p-8">
-            <h2 className="flex items-center mb-6 text-2xl font-bold text-gray-800">
-            <span className="w-8 h-1 mr-3 bg-orange-500 rounded-full"></span>
-            Dish Spotlight
-            </h2>
+        <div className="relative mb-8">
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-yellow-500 opacity-10 rounded-xl"></div>
             
-            <div className="relative bg-white rounded-xl overflow-hidden shadow-lg">
-            <div className="flex flex-col md:flex-row">
-                <div className="md:w-1/2 relative">
-                <img 
-                    src="/burger.avif" 
-                    alt="Signature Dish" 
-                    className="w-full h-64 md:h-full object-cover"
-                    onError={(e) => {
-                    e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="%23f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Crect x="3" y="3" width="18" height="18" rx="2" ry="2"%3E%3C/rect%3E%3Ccircle cx="8.5" cy="8.5" r="1.5"%3E%3C/circle%3E%3Cpolyline points="21 15 16 10 5 21"%3E%3C/polyline%3E%3C/svg%3E';
-                    }}
-                />
-                <div className="absolute top-4 left-4 px-3 py-1 bg-white rounded-full text-orange-600 font-bold text-sm shadow-md">
-                    Chef's Special
-                </div>
-                </div>
+            <div className="p-6 md:p-8">
+                <h2 className="flex items-center mb-6 text-2xl font-bold text-gray-800">
+                <span className="w-8 h-1 mr-3 bg-orange-500 rounded-full"></span>
+                Dish Spotlight
+                </h2>
                 
-                <div className="md:w-1/2 p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">Ultimate Truffle Burger</h3>
-                <div className="flex items-center mb-4">
-                    <div className="bg-green-600 text-white px-2 py-0.5 text-xs font-bold rounded flex items-center">
-                    <span>4.9</span>
-                    <Star className="ml-0.5 h-3 w-3 fill-current" />
+                <div className="relative bg-white rounded-xl overflow-hidden shadow-lg">
+                <div className="flex flex-col md:flex-row">
+                    <div className="md:w-1/2 relative">
+                    <img 
+                        src="/burger.avif" 
+                        alt="Signature Dish" 
+                        className="w-full h-64 md:h-full object-cover"
+                        onError={(e) => {
+                        e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="%23f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Crect x="3" y="3" width="18" height="18" rx="2" ry="2"%3E%3C/rect%3E%3Ccircle cx="8.5" cy="8.5" r="1.5"%3E%3C/circle%3E%3Cpolyline points="21 15 16 10 5 21"%3E%3C/polyline%3E%3C/svg%3E';
+                        }}
+                    />
+                    <div className="absolute top-4 left-4 px-3 py-1 bg-white rounded-full text-orange-600 font-bold text-sm shadow-md">
+                        Chef's Special
                     </div>
-                    <span className="ml-2 text-sm text-gray-500">
-                    (128 ratings)
-                    </span>
-                    <span className="ml-4 inline-flex items-center text-sm text-orange-600">
-                    <Clock className="w-4 h-4 mr-1" />
-                    30-35 min
-                    </span>
+                    </div>
+                    
+                    <div className="md:w-1/2 p-6">
+                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Ultimate Truffle Burger</h3>
+                    <div className="flex items-center mb-4">
+                        <div className="bg-green-600 text-white px-2 py-0.5 text-xs font-bold rounded flex items-center">
+                        <span>4.9</span>
+                        <Star className="ml-0.5 h-3 w-3 fill-current" />
+                        </div>
+                        <span className="ml-2 text-sm text-gray-500">
+                        (128 ratings)
+                        </span>
+                        <span className="ml-4 inline-flex items-center text-sm text-orange-600">
+                        <Clock className="w-4 h-4 mr-1" />
+                        30-35 min
+                        </span>
+                    </div>
+                    
+                    <p className="text-gray-600 mb-4">
+                        A gourmet experience featuring wagyu beef patty, black truffle mayo, caramelized onions, aged cheddar, and arugula on a toasted brioche bun.
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                        {["Premium", "Gourmet", "Best Seller"].map((tag, i) => (
+                        <span key={i} className="px-2 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded">
+                            {tag}
+                        </span>
+                        ))}
+                    </div>
+                    
+                    <div className="flex items-center justify-between">
+                        <div className="text-2xl font-bold text-orange-600">$15.99</div>
+                        <button className="bg-orange-500 hover:bg-orange-600 transition-colors text-white font-bold py-2 px-4 rounded-lg flex items-center cursor-pointer">
+                        Order Now
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                        </button>
+                    </div>
+                    </div>
                 </div>
-                
-                <p className="text-gray-600 mb-4">
-                    A gourmet experience featuring wagyu beef patty, black truffle mayo, caramelized onions, aged cheddar, and arugula on a toasted brioche bun.
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                    {["Premium", "Gourmet", "Best Seller"].map((tag, i) => (
-                    <span key={i} className="px-2 py-1 bg-orange-100 text-orange-800 text-xs font-medium rounded">
-                        {tag}
-                    </span>
-                    ))}
                 </div>
-                
-                <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-orange-600">$15.99</div>
-                    <button className="bg-orange-500 hover:bg-orange-600 transition-colors text-white font-bold py-2 px-4 rounded-lg flex items-center">
-                    Order Now
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                    </button>
-                </div>
-                </div>
-            </div>
             </div>
         </div>
-    </div>
 
             {/* Featured Restaurants Section */}
             <div className="relative mb-8">
