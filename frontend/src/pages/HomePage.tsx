@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
 import FoodPreferenceQuiz from '@/components/FoodPreferenceQuiz';
 
+
+
 const HomePage = () => {
     const navigate = useNavigate();
     
@@ -12,6 +14,7 @@ const HomePage = () => {
             pathname: `/search/${searchFormValues.searchQuery}`,
         });
     }, [navigate]);
+
     
     const featuredRestaurants = [
         { id: 1, name: "Burger Palace", rating: 4.3, deliveryTime: "25-30 min", cuisine: "Burgers, Fast Food", image: "/burger-r.jpg" },
@@ -63,6 +66,28 @@ const HomePage = () => {
     const handleRestaurantClick = useCallback((restaurantId: Restaurant['id']) => {
         navigate(`/restaurant/${restaurantId}`);
     }, [navigate]);
+
+    const handleOrderNow = async () => {
+            const restaurantId = "67d46e789a73a0b9bb917f33"; // Hardcoded restaurant ID
+            const specialMenuItem = {
+              _id: "67d46e789a73a0b9bb917f35",
+              name: "Burger",
+              price: 5000, // Adjust price if needed
+              quantity: 1,
+            };
+          
+            // Save to sessionStorage before redirecting
+            sessionStorage.setItem(
+              `cartItems-${restaurantId}`,
+              JSON.stringify([specialMenuItem])
+            );
+          
+            // Redirect to restaurant page
+            window.location.href = `/detail/${restaurantId}`;
+          };
+          
+      
+      
 
     return (
         <div className="flex flex-col gap-8 px-4 pb-16 bg-gray-50 md:px-6">
@@ -442,8 +467,10 @@ const HomePage = () => {
                     </div>
                     
                     <div className="flex items-center justify-between">
-                        <div className="text-2xl font-bold text-orange-600">$15.99</div>
-                        <button className="bg-orange-500 hover:bg-orange-600 transition-colors text-white font-bold py-2 px-4 rounded-lg flex items-center cursor-pointer">
+                        <div className="text-2xl font-bold text-orange-600">Rs. 50</div>
+                        <button className="bg-orange-500 hover:bg-orange-600 transition-colors text-white font-bold py-2 px-4 rounded-lg flex items-center cursor-pointer"
+                             onClick={() => handleOrderNow()}
+                        >
                         Order Now
                         <ArrowRight className="ml-2 w-4 h-4" />
                         </button>
