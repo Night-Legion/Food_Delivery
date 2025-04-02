@@ -4,10 +4,12 @@ import "dotenv/config";
 import mongoose from "mongoose";
 import { v2 as cloudinary } from "cloudinary";
 
+import { Schema, Types } from "mongoose";
 
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string)
   .then(() => console.log('MongoDB connection successful'))
   .catch(err => console.error('MongoDB connection error:', err));
+
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,

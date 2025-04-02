@@ -454,7 +454,7 @@ const HomePage = () => {
                     <div className="flex items-center justify-between">
                         <div className="text-2xl font-bold text-orange-600">Rs. 50</div>
                         <button className="bg-orange-500 hover:bg-orange-600 transition-colors text-white font-bold py-2 px-4 rounded-lg flex items-center cursor-pointer"
-                             onClick={() => handleOrderNow()}
+                            onClick={() => handleOrderNow()}
                         >
                         Order Now
                         <ArrowRight className="ml-2 w-4 h-4" />
