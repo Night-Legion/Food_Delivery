@@ -72,7 +72,7 @@ const HelpPage = () => {
 
     return (
         <div className="flex flex-col gap-12 pb-12">
-            {/* Help Center Hero Section */}
+            {/* Help Center Hero Section  */}
             <div className="relative overflow-hidden bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg">
                 <div className="absolute inset-0 opacity-10">
                     <img 
