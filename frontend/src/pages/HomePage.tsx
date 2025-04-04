@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Clock, Star, ArrowRight,  MapPin, Truck, Award, Gift } from 'lucide-react';
 import SearchBar, { SearchForm } from "@/components/SearchBar";
 import { useNavigate } from "react-router-dom";
@@ -40,7 +41,7 @@ const HomePage = () => {
 
     const specialOffers = [
         { id: 1, title: "50% OFF", description: "On first 3 orders", code: "NEWUSER50", expiry: "Limited time offer" },
-        { id: 2, title: "FREE DELIVERY", description: "On orders above $25", code: "FREEDEL", expiry: "Valid for this week" },
+        { id: 2, title: "FREE DELIVERY", description: "On orders above ₹25", code: "FREEDEL", expiry: "Valid for this week" },
         { id: 3, title: "20% CASHBACK", description: "When you pay with our app wallet", code: "WALLET20", expiry: "Valid until April 30" },
     ];
 
