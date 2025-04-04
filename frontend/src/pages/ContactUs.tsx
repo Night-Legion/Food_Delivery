@@ -128,7 +128,7 @@ const HelpPage = () => {
                         <MapPin className="w-6 h-6 text-orange-500" />
                     </div>
                     <h3 className="mb-2 text-lg font-bold text-gray-800">Visit Us</h3>
-                    <p className="mb-3 text-gray-600">Our main office is located in the heart of the city.</p>
+                    <p className="mb-3 text-gray-600">Our main office is located in the heart of the city. </p>
                     <address className="not-italic text-orange-500 hover:text-orange-600 font-medium">
                         123 Food Street, Metro City, India
                     </address>
