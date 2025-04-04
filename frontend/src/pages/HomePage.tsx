@@ -45,7 +45,8 @@ const HomePage = () => {
     ];
 
     const handleCategoryClick = useCallback((categoryName: string) => {
-        navigate(`/category/${categoryName.toLowerCase()}`);
+        // navigate(`/category/${categoryName.toLowerCase()}`);
+        navigate('/menu')
     }, [navigate]);
 
     interface Restaurant {
@@ -481,10 +482,11 @@ const HomePage = () => {
                 </div>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                     {featuredRestaurants.map((restaurant) => (
+                        
                         <div 
                             key={restaurant.id} 
                             className="overflow-hidden transition duration-300 transform bg-white rounded-xl shadow-md cursor-pointer hover:shadow-xl hover:-translate-y-1 group"
-                            onClick={() => handleRestaurantClick(restaurant.id)}
+                            onClick={() => handleCategoryClick(restaurant.name)}
                         >
                             <div className="relative h-48 overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
