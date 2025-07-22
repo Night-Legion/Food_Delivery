@@ -199,13 +199,13 @@ hungrr/
 
 ## 🌐 Deployment
 
-### **Frontend (Vercel/Netlify)**
+### **Frontend (Vercel)**
 ```bash
 npm run build
 # Deploy the dist/ folder
 ```
 
-### **Backend (Railway/Heroku)**
+### **Backend (Render)**
 ```bash
 npm run build
 # Deploy with your preferred platform
