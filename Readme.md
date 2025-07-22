@@ -1,7 +1,7 @@
 # 🍔 Hungrr - Food Delivery Platform
 
 <div align="center">
-  <img src="public/hungrr-logo.svg" alt="Hungrr Logo" width="200"/>
+  <img src="frontend/public/hungrr-logo.svg" alt="Hungrr Logo" width="200"/>
   
   [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -12,7 +12,7 @@
 
   **A modern, full-stack food delivery platform that connects hungry customers with their favorite restaurants**
   
-  [Live Demo](https://hungrr-demo.com) • [API Documentation](https://api.hungrr.com/docs) • [Report Bug](https://github.com/Night-Legion/Food_Delivery/issues)
+  [Live Demo](https://hungrr-demo.com) • [Report Bug](https://github.com/Night-Legion/Food_Delivery/issues)
 </div>
 
 ## 🌟 Features
@@ -131,13 +131,13 @@ Your application will be running at:
 ## 📱 Screenshots
 
 <div align="center">
-  <img src="public/app.png" alt="Hungrr Homepage" width="800"/>
+  <img src="frontend/public/app.png" alt="Hungrr Homepage" width="800"/>
   <p><em>Modern and intuitive homepage design</em></p>
   
-  <img src="public/res1.jpg" alt="Restaurant Listing" width="800"/>
+  <img src="frontend/public/res1.jpg" alt="Restaurant Listing" width="800"/>
   <p><em>Smart restaurant discovery with advanced filtering</em></p>
   
-  <img src="public/canteen-new.jpg" alt="Canteen Interface" width="800"/>
+  <img src="frontend/public/canteen-new.jpg" alt="Canteen Interface" width="800"/>
   <p><em>Special campus canteen ordering interface</em></p>
 </div>
 
@@ -262,13 +262,12 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 - **Auth0** for authentication services
 - **MongoDB Atlas** for cloud database hosting
 - **Vercel** for frontend hosting
-- **Railway** for backend hosting
+- **Render** for backend hosting
 
 ## 📞 Support
 
 If you encounter any issues or have questions:
 
-- 📧 Email: support@hungrr.com
 - 🐛 Issues: [GitHub Issues](https://github.com/Night-Legion/Food_Delivery/issues)
 - 💬 Discussions: [GitHub Discussions](https://github.com/Night-Legion/Food_Delivery/discussions)
 
