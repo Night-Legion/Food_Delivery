@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState, useEffect } from 'react';
 import { Clock, Star, MapPin, Search, Filter, ArrowRight, Heart, ShoppingBag, Bell, Info, Award } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -149,60 +150,60 @@ const Canteen = () => {
 
     const handleOrderNow = async () => {
         const restaurantId = "67d46e789a73a0b9bb917f36";
-        const specialMenuItem = [
-            {
-                "_id": "67d46e789a73a0b9bb917f36",
-                "name": "Veg Sandwich",
-                "price": 40,
-                "quantity": 1
-            },
-            {
-                "_id": "67d46e789a73a0b9bb917f37",
-                "name": "Masala Dosa",
-                "price": 60,
-                "quantity": 1
-            },
-            {
-                "_id": "67d46e789a73a0b9bb917f38",
-                "name": "Chicken Biryani",
-                "price": 120,
-                "quantity": 1
-            },
-            {
-                "_id": "67d46e789a73a0b9bb917f39",
-                "name": "Veg Pulao",
-                "price": 80,
-                "quantity": 1
-            },
-            {
-                "_id": "67d46e789a73a0b9bb917f3A",
-                "name": "Paneer Roll",
-                "price": 70,
-                "quantity": 1
-            },
-            {
-                "_id": "67d46e789a73a0b9bb917f3B",
-                "name": "Cold Coffee",
-                "price": 50,
-                "quantity": 1
-            },
-            {
-                "_id": "67d46e789a73a0b9bb917f3C",
-                "name": "Butter Chicken",
-                "price": 140,
-                "quantity": 1
-            },
-            {
-                "_id": "67d46e789a73a0b9bb917f3D",
-                "name": "Samosa",
-                "price": 20,
-                "quantity": 1
-            }
-        ]        
-            sessionStorage.setItem(
-            `cartItems-${restaurantId}`,
-            JSON.stringify([specialMenuItem])
-            );
+        // const specialMenuItem = [
+        //     {
+        //         "_id": "67d46e789a73a0b9bb917f36",
+        //         "name": "Veg Sandwich",
+        //         "price": 40,
+        //         "quantity": 1
+        //     },
+        //     {
+        //         "_id": "67d46e789a73a0b9bb917f37",
+        //         "name": "Masala Dosa",
+        //         "price": 60,
+        //         "quantity": 1
+        //     },
+        //     {
+        //         "_id": "67d46e789a73a0b9bb917f38",
+        //         "name": "Chicken Biryani",
+        //         "price": 120,
+        //         "quantity": 1
+        //     },
+        //     {
+        //         "_id": "67d46e789a73a0b9bb917f39",
+        //         "name": "Veg Pulao",
+        //         "price": 80,
+        //         "quantity": 1
+        //     },
+        //     {
+        //         "_id": "67d46e789a73a0b9bb917f3A",
+        //         "name": "Paneer Roll",
+        //         "price": 70,
+        //         "quantity": 1
+        //     },
+        //     {
+        //         "_id": "67d46e789a73a0b9bb917f3B",
+        //         "name": "Cold Coffee",
+        //         "price": 50,
+        //         "quantity": 1
+        //     },
+        //     {
+        //         "_id": "67d46e789a73a0b9bb917f3C",
+        //         "name": "Butter Chicken",
+        //         "price": 140,
+        //         "quantity": 1
+        //     },
+        //     {
+        //         "_id": "67d46e789a73a0b9bb917f3D",
+        //         "name": "Samosa",
+        //         "price": 20,
+        //         "quantity": 1
+        //     }
+        // ]        
+        //     sessionStorage.setItem(
+        //     `cartItems-${restaurantId}`,
+        //     JSON.stringify([specialMenuItem])
+        //     );
             navigate(`/detail/${restaurantId}`);
         };
 

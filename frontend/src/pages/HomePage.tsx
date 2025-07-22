@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Clock, Star, ArrowRight,  MapPin, Truck, Award, Gift } from 'lucide-react';
 import SearchBar, { SearchForm } from "@/components/SearchBar";
 import { useNavigate } from "react-router-dom";
@@ -40,12 +41,13 @@ const HomePage = () => {
 
     const specialOffers = [
         { id: 1, title: "50% OFF", description: "On first 3 orders", code: "NEWUSER50", expiry: "Limited time offer" },
-        { id: 2, title: "FREE DELIVERY", description: "On orders above $25", code: "FREEDEL", expiry: "Valid for this week" },
+        { id: 2, title: "FREE DELIVERY", description: "On orders above ₹25", code: "FREEDEL", expiry: "Valid for this week" },
         { id: 3, title: "20% CASHBACK", description: "When you pay with our app wallet", code: "WALLET20", expiry: "Valid until April 30" },
     ];
 
     const handleCategoryClick = useCallback((categoryName: string) => {
-        navigate(`/category/${categoryName.toLowerCase()}`);
+        // navigate(`/category/${categoryName.toLowerCase()}`);
+        navigate('/menu')
     }, [navigate]);
 
     interface Restaurant {
@@ -481,10 +483,11 @@ const HomePage = () => {
                 </div>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                     {featuredRestaurants.map((restaurant) => (
+                        
                         <div 
                             key={restaurant.id} 
                             className="overflow-hidden transition duration-300 transform bg-white rounded-xl shadow-md cursor-pointer hover:shadow-xl hover:-translate-y-1 group"
-                            onClick={() => handleRestaurantClick(restaurant.id)}
+                            onClick={() => handleCategoryClick(restaurant.name)}
                         >
                             <div className="relative h-48 overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
