@@ -230,30 +230,6 @@ We welcome contributions from the community! Here's how you can help:
 - Add tests for new features
 - Update documentation as needed
 
-## 📋 Roadmap
-
-- [ ] **Mobile App** - React Native mobile application
-- [ ] **Real-time Chat** - Customer-restaurant communication
-- [ ] **AI Recommendations** - Machine learning-powered food suggestions
-- [ ] **Multi-language Support** - Internationalization
-- [ ] **Advanced Analytics** - Business intelligence dashboard
-- [ ] **Loyalty Program** - Customer rewards system
-- [ ] **Dark Mode** - Enhanced user experience
-- [ ] **Voice Ordering** - Voice-powered food ordering
-
-## ⚠️ Known Issues
-
-- [ ] Occasional delay in real-time order updates
-- [ ] Image upload size limitations
-- [ ] Mobile responsiveness on very small screens
-
-## 📄 License
-
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
-
-## 👥 Team
-
-- **[Night-Legion](https://github.com/Night-Legion)** - Lead Developer & Project Maintainer
 
 ## 🙏 Acknowledgments
 
